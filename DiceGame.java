@@ -4,6 +4,11 @@ import java.util.Scanner;
 public class DiceGame {
     public static void main(String[] args) {
         Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("What is your name? \n> ");
+        String name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
 
         System.out.println("Rolling dice...");
         int die1 = rollDice(random);
@@ -15,9 +20,9 @@ public class DiceGame {
     }
 
     if (die1 + die2 > 7) {
-        System.out.println("You won!");
+        System.out.println(name + " won!");
     } else {
-        System.out.println("You lost.");
+        System.out.println(name + " lost.");
     }
     
 
